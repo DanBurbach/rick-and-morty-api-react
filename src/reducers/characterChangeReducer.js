@@ -6,7 +6,7 @@ const characterChangeReducer = (state = initialState.currentCharacterArray, acti
   switch (action.type) {
 
   case types.RECEIVE_CHARACTERS:
-    return action.currentCharacterArray
+    return action.currentCharacterArray;
   default:
     return state;
   }

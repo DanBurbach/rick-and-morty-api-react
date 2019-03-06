@@ -5,7 +5,7 @@ const selectCharacterReducer = (state = initialState.selectedCharacter, action) 
   switch (action.type) {
 
   case types.SELECT_CHARACTER:
-      return action.selectedCharacter
+    return action.selectedCharacter;
   default:
     return state;
   }

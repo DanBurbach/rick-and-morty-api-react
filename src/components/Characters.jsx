@@ -10,7 +10,6 @@ const Characters = (props) => {
     <div>
       <em>list of characters</em>
       {props.currentCharacterArray.map(character => {
-        console.log(character);
         return <li onClick={()=> props.dispatch(selectCharacter(character))} key={character.id}>{character.name}</li>;
       })}
       {props.selectedCharacter ? <CharacterDisplay name={props.selectedCharacter.name} status={props.selectedCharacter.status} species={props.selectedCharacter.species} type={props.selectedCharacter.type} gender={props.selectedCharacter.gender} origin={props.selectedCharacter.origin.name} location={props.selectedCharacter.location.name} image={props.selectedCharacter.image}/> : null}
@@ -19,12 +18,13 @@ const Characters = (props) => {
 };
 
 Characters.propTypes = {
-  currentCharacterArray: PropTypes.array,
-  name: PropTypes.string
+  currentCharacterArray: PropTypes.arrayOf(Object),
+  selectedCharacter: PropTypes.Object,
+  name: PropTypes.string,
+  dispatch: PropTypes.func
 };
 
 const mapStateToProps = state => {
-  console.log(state.selectedCharacter);
   return {
     currentCharacterArray: state.currentCharacterArray,
     selectedCharacter: state.selectedCharacter

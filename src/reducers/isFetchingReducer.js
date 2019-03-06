@@ -5,7 +5,7 @@ const characterChangeReducer = (state = initialState.isFetching, action) => {
   switch (action.type) {
 
   case types.REQUEST_CHARACTERS:
-    return false
+    return false;
   default:
     return state;
   }
