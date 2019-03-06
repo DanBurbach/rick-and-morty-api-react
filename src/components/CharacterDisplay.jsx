@@ -14,7 +14,7 @@ const CharacterDisplay = (props) => {
           <p>Origin: {props.origin}</p>
           <p>Location: {props.location}</p>
         </li>
-      </ul>
+      </ul>  
     </div>
   );
 };

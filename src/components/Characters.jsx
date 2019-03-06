@@ -5,14 +5,14 @@ import { selectCharacter } from './../actions';
 import CharacterDisplay from './CharacterDisplay';
 
 
-const Characters = (props) => {
+const Characters = ({currentCharacterArray, selectedCharacter, dispatch}) => {
   return (
     <div>
       <em>List of characters</em>
-      {props.currentCharacterArray.map(character => {
-        return <li onClick={()=> props.dispatch(selectCharacter(character))} key={character.id}>{character.name}</li>;
+      {currentCharacterArray.map(character => {
+        return <li onClick={()=> dispatch(selectCharacter(character))} key={character.id}>{character.name}</li>;
       })}
-      {props.selectedCharacter ? <CharacterDisplay name={props.selectedCharacter.name} status={props.selectedCharacter.status} species={props.selectedCharacter.species} type={props.selectedCharacter.type} gender={props.selectedCharacter.gender} origin={props.selectedCharacter.origin.name} location={props.selectedCharacter.location.name} image={props.selectedCharacter.image}/> : null}
+      {selectedCharacter ? <CharacterDisplay name={selectedCharacter.name} status={selectedCharacter.status} species={selectedCharacter.species} type={selectedCharacter.type} gender={selectedCharacter.gender} origin={selectedCharacter.origin.name} location={selectedCharacter.location.name} image={selectedCharacter.image}/> : null}
     </div>
   );
 };
