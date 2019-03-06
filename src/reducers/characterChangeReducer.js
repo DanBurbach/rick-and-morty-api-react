@@ -2,12 +2,11 @@ import constants from './../constants';
 const { initialState, types } = constants;
 
 const characterChangeReducer = (state = initialState.currentCharacterArray, action) => {
-  let newStateSlice;
+
   switch (action.type) {
 
   case types.RECEIVE_CHARACTERS:
     return action.currentCharacterArray
-    
   default:
     return state;
   }

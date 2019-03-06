@@ -1,5 +1,5 @@
 import React from 'react';
-import CharacterDisplay from './CharacterDisplay';
+
 import Characters from './Characters';
 import Header from './Header';
 
@@ -9,8 +9,6 @@ function App(){
       <Header />
       <br/>
       <Characters />
-      <hr/>
-      <CharacterDisplay />
     </div>
   );
 }

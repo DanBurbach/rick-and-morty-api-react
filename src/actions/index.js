@@ -14,11 +14,18 @@ export const receiveCharacters = (currentCharacterArray) => ({
   currentCharacterArray
 });
 
+export const selectCharacter = (character) =>
+({
+  type: types.SELECT_CHARACTER,
+  selectedCharacter: character
+})
+
 export function fetchCharacter(name) {
   return function (dispatch) {
     dispatch(requestCharacters());
-    name = name.replace(' ', '_');
-    return fetch('https://rickandmortyapi.com/api/character/?name=' + name).then(
+    const name2 = name.replace(' ', '+');
+    console.log(name)
+    return fetch('https://rickandmortyapi.com/api/character/?name='+name2).then(
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {

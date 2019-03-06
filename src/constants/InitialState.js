@@ -1,5 +1,6 @@
 
 export const initialState = {
   currentCharacterArray: [],
-  isFetching: false
+  isFetching: false,
+  selectedCharacter: false
 };
