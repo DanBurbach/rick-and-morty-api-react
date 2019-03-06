@@ -8,7 +8,7 @@ import CharacterDisplay from './CharacterDisplay';
 const Characters = (props) => {
   return (
     <div>
-      <em>list of characters</em>
+      <em>List of characters</em>
       {props.currentCharacterArray.map(character => {
         return <li onClick={()=> props.dispatch(selectCharacter(character))} key={character.id}>{character.name}</li>;
       })}

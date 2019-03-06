@@ -2,10 +2,13 @@
 <head>
   <meta charset="utf-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
+
 </head>
   <body>
     <% if (htmlWebpackPlugin.options.appMountId) { %>
       <div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
     <% } %>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./src/assets/Card.js"></script>
   </body>
 </html>

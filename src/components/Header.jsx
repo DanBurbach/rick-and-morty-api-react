@@ -4,7 +4,8 @@ import CharacterSearch from './CharacterSearch';
 function Header(){
   return (
     <div>
-      <h1>Character</h1>
+      <h1>Rick and Morty Character Cards</h1>
+      <br/>
       <CharacterSearch />
     </div>
   );
