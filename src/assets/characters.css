@@ -1,5 +1,5 @@
  .character_results_group {
-    display: inline-block;
-    top: 0;
+    display: block;
     position: relative;
+    top: 0;
  }

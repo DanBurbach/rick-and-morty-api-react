@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { selectCharacter } from './../actions';
 import CharacterDisplay from './CharacterDisplay';
 
+import './../assets/characters.css';
+
 
 const Characters = ({currentCharacterArray, selectedCharacter, dispatch}) => {
   return (

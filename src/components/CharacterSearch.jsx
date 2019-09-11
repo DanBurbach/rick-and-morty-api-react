@@ -15,7 +15,7 @@ function CharacterSearch({ dispatch }){
         dispatch(fetchCharacter(input.value.trim()));
         input.value = '';
       }}>
-        <input placeholder="Character Name" ref={node => {
+        <input placeholder="Character Name" required ref={node => {
           input = node;
         }}></input>
         <button>Search</button>
