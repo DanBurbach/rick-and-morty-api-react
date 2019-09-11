@@ -22,27 +22,27 @@ const Characters = ({currentCharacterArray, selectedCharacter, dispatch}) => {
             location={selectedCharacter.location.name}
             image={selectedCharacter.image}
           />
-      </div>
+        </div>
       ) : null 
       }
       <h4>List of characters</h4>
-        {currentCharacterArray.map(character => {
-          return (
-            <li
-              onClick={() => dispatch(selectCharacter(character))}
-              key={character.id}
-            >
-              {character.name}
-            </li>
-          );
-        })}
+      {currentCharacterArray.map(character => {
+        return (
+          <li
+            onClick={() => dispatch(selectCharacter(character))}
+            key={character.id}
+          >
+            {character.name}
+          </li>
+        );
+      })}
     </div>
   );
 };
 
 Characters.propTypes = {
   currentCharacterArray: PropTypes.arrayOf(Object),
-  selectedCharCharaacter: PropTypes.Object,
+  selectedCharacter: PropTypes.Object,
   name: PropTypes.string,
   dispatch: PropTypes.func
 };

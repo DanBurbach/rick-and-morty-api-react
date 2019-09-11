@@ -1,5 +1,7 @@
 const webpack = require('webpack');
-const { resolve } = require('path');
+const {
+  resolve
+} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -30,8 +32,7 @@ module.exports = {
   },
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.jsx?$/,
         enforce: "pre",
         loader: "eslint-loader",
@@ -39,26 +40,28 @@ module.exports = {
         options: {
           emitWarning: true,
           configFile: "./.eslintrc"
-          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
         },
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-        },
-        {
-          test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-          },
-        },
-        {
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
           presets: [
-            ["es2015", {"modules": false}],
+            ["es2015", {
+              "modules": false
+            }],
             "react",
           ],
           plugins: [
@@ -73,7 +76,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template:'template.ejs',
+      template: 'template.ejs',
       appMountId: 'react-app-root',
       title: 'Rick and Morty API React Project',
       filename: resolve(__dirname, "build", "index.html"),

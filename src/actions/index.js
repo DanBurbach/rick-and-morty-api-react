@@ -1,9 +1,9 @@
 import * as types from './../constants/ActionTypes';
 
-// export const changeCharacter = (newSelectedCharacter) => ({
-//   type: types.CHANGE_CHARACTER,
-//   newSelectedCharacter
-// });
+export const changeCharacter = (newSelectedCharacter) => ({
+  type: types.CHANGE_CHARACTER,
+  newSelectedCharacter
+});
 
 export const requestCharacters = () => ({
   type: types.REQUEST_CHARACTERS,
