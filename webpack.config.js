@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'Redux Karaoke',
+      title: 'Rick and Morty API React Project',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]
