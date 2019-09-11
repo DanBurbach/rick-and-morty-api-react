@@ -1,3 +1,17 @@
+h1 {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 3vw;
+  background: rgb(180, 180, 180);
+}
+
 .cards {
   position: relative;
   list-style-type: none;
@@ -5,6 +19,7 @@
   max-width: 34em;
   margin: 20% auto 0;
 }
+
 .card {
   position: absolute;
   top: 0;
@@ -92,14 +107,4 @@
   -webkit-transform: rotate(-1deg) translateX(0%) scale(1);
           transform: rotate(-1deg) translateX(0%) scale(1);
 }
-h1 {
-  margin: 0;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  padding: 40px;
-  background: grey;
-}
+

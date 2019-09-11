@@ -7,8 +7,8 @@ function CharacterSearch({ dispatch }){
   let input;
   return (
     <div>
-      <form onSubmit={e => {
-        e.preventDefault();
+      <form onSubmit={event => {
+        event.preventDefault();
         if (!input.value.trim()) {
           return;
         }

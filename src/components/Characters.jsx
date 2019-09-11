@@ -7,19 +7,37 @@ import CharacterDisplay from './CharacterDisplay';
 
 const Characters = ({currentCharacterArray, selectedCharacter, dispatch}) => {
   return (
-    <div>
-      <em>List of characters</em>
+    <div className="character_results_group">
+      {selectedCharacter ? (
+        <CharacterDisplay
+          name={selectedCharacter.name}
+          status={selectedCharacter.status}
+          species={selectedCharacter.species}
+          type={selectedCharacter.type}
+          gender={selectedCharacter.gender}
+          origin={selectedCharacter.origin.name}
+          location={selectedCharacter.location.name}
+          image={selectedCharacter.image}
+        />
+      ) : null}
+      <h4>List of characters</h4>
       {currentCharacterArray.map(character => {
-        return <li onClick={()=> dispatch(selectCharacter(character))} key={character.id}>{character.name}</li>;
+        return (
+          <li
+            onClick={() => dispatch(selectCharacter(character))}
+            key={character.id}
+          >
+            {character.name}
+          </li>
+        );
       })}
-      {selectedCharacter ? <CharacterDisplay name={selectedCharacter.name} status={selectedCharacter.status} species={selectedCharacter.species} type={selectedCharacter.type} gender={selectedCharacter.gender} origin={selectedCharacter.origin.name} location={selectedCharacter.location.name} image={selectedCharacter.image}/> : null}
     </div>
   );
 };
 
 Characters.propTypes = {
   currentCharacterArray: PropTypes.arrayOf(Object),
-  selectedCharacter: PropTypes.Object,
+  selectedCharCharaacter: PropTypes.Object,
   name: PropTypes.string,
   dispatch: PropTypes.func
 };
