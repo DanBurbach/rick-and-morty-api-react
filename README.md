@@ -1,5 +1,5 @@
 # Rick and Morty API Project (Built in React.js/Redux)
-
+![Main LandingPage](https://github.com/DanBurbach/rick-and-morty-api-react/blob/master/src/assets/Rick&MortyScreenShot.png?raw=true)
 
 ### __Created by Dan Burbach__
 #### __March  2019__
