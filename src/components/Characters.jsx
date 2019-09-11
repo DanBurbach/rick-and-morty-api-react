@@ -9,30 +9,33 @@ import './../assets/characters.css';
 
 const Characters = ({currentCharacterArray, selectedCharacter, dispatch}) => {
   return (
-    <div className="character_results_group">
+    <div>
       {selectedCharacter ? (
-        <CharacterDisplay
-          name={selectedCharacter.name}
-          status={selectedCharacter.status}
-          species={selectedCharacter.species}
-          type={selectedCharacter.type}
-          gender={selectedCharacter.gender}
-          origin={selectedCharacter.origin.name}
-          location={selectedCharacter.location.name}
-          image={selectedCharacter.image}
-        />
-      ) : null}
+        <div className="character_results_group">
+          <CharacterDisplay
+            name={selectedCharacter.name}
+            status={selectedCharacter.status}
+            species={selectedCharacter.species}
+            type={selectedCharacter.type}
+            gender={selectedCharacter.gender}
+            origin={selectedCharacter.origin.name}
+            location={selectedCharacter.location.name}
+            image={selectedCharacter.image}
+          />
+      </div>
+      ) : null 
+      }
       <h4>List of characters</h4>
-      {currentCharacterArray.map(character => {
-        return (
-          <li
-            onClick={() => dispatch(selectCharacter(character))}
-            key={character.id}
-          >
-            {character.name}
-          </li>
-        );
-      })}
+        {currentCharacterArray.map(character => {
+          return (
+            <li
+              onClick={() => dispatch(selectCharacter(character))}
+              key={character.id}
+            >
+              {character.name}
+            </li>
+          );
+        })}
     </div>
   );
 };

@@ -41,13 +41,15 @@ button {
 
 .card {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -5em;
+  left: 30em;
   z-index: 2;
   background: #ccc;
+  color: #000000;
   border-radius: 30px;
   padding: 40px;
-  box-shadow: 0 0 40px #000;
+  box-shadow: 0.75em 0.5em 0.75em 1em rgb(166, 11, 228);
+  ;
   -webkit-transform: translateY(0) rotate(4deg) translateX(25px) scale(1);
           transform: translateY(0) rotate(4deg) translateX(25px) scale(1);
   -webkit-transform-origin: 0 0;

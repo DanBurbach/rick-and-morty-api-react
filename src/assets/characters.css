@@ -1,5 +1,4 @@
  .character_results_group {
-    display: block;
-    position: relative;
-    top: 0;
+   display: block;
+   position: absolute;
  }

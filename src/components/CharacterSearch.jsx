@@ -3,6 +3,7 @@ import { fetchCharacter } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+
 function CharacterSearch({ dispatch }){
   let input;
   return (
