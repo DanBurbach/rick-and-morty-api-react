@@ -25,8 +25,8 @@ export function fetchCharacter(name) {
     dispatch(requestCharacters());
     const name2 = name.replace(' ', '+');
     return fetch('https://rickandmortyapi.com/api/character/?name='+name2).then(
-      response => response.json(),
-      error => console.log('An error occurred.', error)
+      response => response.json()
+      // error => console.log('An error occurred.', error)
     ).then(function(json) {
       dispatch(receiveCharacters(json.results));
     });
