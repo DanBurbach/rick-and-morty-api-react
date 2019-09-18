@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack--config webpack.conf.js",
+    "build": "webpack-dev-server",
     "test": "jest --watchAll",
     "start": "webpack-dev-server",
     "lint": "eslint src/** src/**/**; exit 0",
