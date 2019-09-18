@@ -24,7 +24,7 @@ Using React-Redux to call on an API key based project. (API has no need of key).
 
   * Enjoy!
   
-  * OR click here for Heroku link!
+  * OR
 
 ### __Technologies Used__
 
