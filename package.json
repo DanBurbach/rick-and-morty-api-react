@@ -35,11 +35,11 @@
     "eslint": "^4.13.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.5.1",
-    "html-webpack-plugin": "^2.29.0",
+    "html-webpack-plugin": "^5.5.0",
     "jest": "^25.0.0",
     "react-hot-loader": "^3.0.0-beta.7",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.0",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^2.5.0"
   },
   "repository": {
